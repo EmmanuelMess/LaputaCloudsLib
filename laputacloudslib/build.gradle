@@ -44,15 +44,7 @@ dependencies {
 
     implementation 'com.microsoft.services.msa:msa-auth:0.8.0'
     implementation 'com.microsoft.aad:adal:1.1.0'
-
-
-    //Dropbox
-    implementation 'com.dropbox.core:dropbox-core-sdk:3.1.3'
-
-
-    //Box
-    implementation 'com.box:box-java-sdk:2.32.0'
-
+    
 
 
     testImplementation 'junit:junit:4.12'
