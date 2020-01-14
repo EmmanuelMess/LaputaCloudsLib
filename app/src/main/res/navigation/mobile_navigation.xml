@@ -6,38 +6,63 @@
     app:startDestination="@+id/nav_home">
 
     <fragment
-        android:id="@+id/nav_start"
-        android:name="com.amaze.laputacloudslib.ui.home.HomeFragment"
-        android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
-
-    <fragment
         android:id="@+id/nav_home"
-        android:name="com.amaze.laputacloudslib.ui.tools.ToolsFragment"
-        android:label="@string/menu_home"
+        android:name="com.amaze.laputacloudslib.ui.home.HomeFragment"
+        android:label="@string/home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.amaze.laputacloudslib.ui.tools.ToolsFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        android:id="@+id/nav_gdrive"
+        android:name="com.amaze.laputacloudslib.ui.tools.FileManagerFragment"
+        android:label="@string/google_drive"
+        tools:layout="@layout/fragment_filemanager" >
+        <argument
+            android:name="cloudName"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.amaze.laputacloudslib.ui.tools.ToolsFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/nav_onedrive"
+        android:name="com.amaze.laputacloudslib.ui.tools.FileManagerFragment"
+        android:label="@string/onedrive"
+        tools:layout="@layout/fragment_filemanager" >
+        <argument
+            android:name="cloudName"
+            app:argType="integer"
+            android:defaultValue="1" />
+    </fragment>
 
     <fragment
-        android:id="@+id/nav_tools"
-        android:name="com.amaze.laputacloudslib.ui.tools.ToolsFragment"
-        android:label="@string/menu_tools"
-        tools:layout="@layout/fragment_tools" />
+        android:id="@+id/nav_dropbox"
+        android:name="com.amaze.laputacloudslib.ui.tools.FileManagerFragment"
+        android:label="@string/dropbox"
+        tools:layout="@layout/fragment_filemanager" >
+        <argument
+            android:name="cloudName"
+            app:argType="integer"
+            android:defaultValue="2" />
+    </fragment>
 
     <fragment
-        android:id="@+id/nav_share"
-        android:name="com.amaze.laputacloudslib.ui.tools.ToolsFragment"
-        android:label="@string/menu_share"
-        tools:layout="@layout/fragment_share" />
+        android:id="@+id/nav_pdrive"
+        android:name="com.amaze.laputacloudslib.ui.tools.FileManagerFragment"
+        android:label="@string/pdrive"
+        tools:layout="@layout/fragment_filemanager" >
+        <argument
+            android:name="cloudName"
+            app:argType="integer"
+            android:defaultValue="3" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_box"
+        android:name="com.amaze.laputacloudslib.ui.tools.FileManagerFragment"
+        android:label="@string/box"
+        tools:layout="@layout/fragment_filemanager" >
+        <argument
+            android:name="cloudName"
+            app:argType="integer"
+            android:defaultValue="4" />
+    </fragment>
 </navigation>
