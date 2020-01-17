@@ -6,7 +6,7 @@
 # We propagate the environment to the container (sse https://github.com/buildkite-plugins/docker-buildkite-plugin#propagate-environment-optional-boolean)
 
 steps:
-  - label: "Compile and run library Unit tests"
+  - label: "Compile library Unit tests"
     agents:
       # We use a medium sized instance instead of the normal small ones because
       # gradle build can be memory hungry
@@ -18,7 +18,7 @@ steps:
           image: "runmymind/docker-android-sdk"
           propagate-environment: true
 
-  - label: "Compile and run library Android tests"
+  - label: "Compile library Android tests"
     agents:
       # We use a medium sized instance instead of the normal small ones because
       # gradle build can be memory hungry
@@ -33,7 +33,7 @@ steps:
   # Code quality
   - label: "ktlint"
     command:
-      - "./gradlew :laputacloudslib:clean :laputacloudslib:ktlint --stacktrace"
+      - "./gradlew ktlint --stacktrace"
     plugins:
       - docker#v3.1.0:
           image: "openjdk"
